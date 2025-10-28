@@ -30,6 +30,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      #Typescript syntax test
+      - name: Type check
+        run: npx tsc --noEmit
+
         # Run tests (if you have any)
       - name: Run Tests
         run: npm test

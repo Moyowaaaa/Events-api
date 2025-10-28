@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./db/db";
 import cors from "cors";
 import type { Request, Response, Express } from "express";
-import router from "./routes/hero.routes";
+// import router from "./routes/hero.routes";
 import heroRoutes from "./routes/index";
 import ErrorLogger from "./middleware/ErrorLogger";
 
@@ -55,6 +55,8 @@ app.listen(port, async () => {
     process.exit(1);
   }
 });
+
+// app.get();
 
 process.on("uncaughtException", (err: Error) => {
   console.error("There was an uncaught error", err);
